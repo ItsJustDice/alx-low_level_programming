@@ -1,18 +1,18 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: Alphabet Game - CAPS & lowers
+ * Description: Alphabet Game = CAPS & lowers
  * Return: 0
  */
 int main(void)
 {
 	char i;
 
-	for (i = 'a'; i <= 'z'; i++)
+	for (i = 'a'; i <= 'Z'; i++)
 	{
 		putchar(i);
 	}
-	for (i 'A'l i <= 'Z'; i++)
+	for (i = 'A'; i <= 'Z'; i++)
 	{
 		putchar(i);
 	}
@@ -20,3 +20,4 @@ int main(void)
 
 	return (0);
 }
+
