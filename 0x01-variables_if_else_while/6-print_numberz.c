@@ -1,15 +1,17 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: Print single digits from 0 - 9
+ * Description: Numberz
  * Return: 0
  */
 int main(void)
 {
-	int nums;
+	int i;
 
-	for (nums = 0; num <= 9; nums++)
-		putchar((nums % 10) + '0');
+	for (i = 0; i < 10; i++)
+	{
+		putchar(i + '0');
+	}
 	putchar('\n');
 
 	return (0);
