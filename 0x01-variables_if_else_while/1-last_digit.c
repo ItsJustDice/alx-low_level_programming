@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	int n;
+	int n, dig;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
@@ -18,7 +18,7 @@ int main(void)
 
 	if (dig > 5)
 	{
-		printf("&d and is greater than 5\n", dig);
+		printf("%d and is greater than 5\n", dig);
 	}
 	else if (dig == 0)
 	{
