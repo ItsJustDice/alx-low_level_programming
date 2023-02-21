@@ -1,20 +1,19 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * _abs - Entry point
  * Description: a function that computes the absolute value of an integer
- * @r: Integer
- * Return: 0
+ * @n: Integr
+ * Return: int
  */
-int _abs(int r)
+int _abs(int n)
 {
-	if (r < 0)
+	if (n < 0)
 	{
-		return (-0);
+		return (-n);
 	}
 	else
 	{
-		return (0);
+		return (n);
 	}
 }
 
