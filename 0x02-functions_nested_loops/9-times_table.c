@@ -2,11 +2,9 @@
 /**
  * times_table - Entry point
  * Description: a function that prints the 9 times table, starting with 0
- * @i: Integer
- * @j: Interger
  * Return: void
  */
-void times_table(void);
+void times_table(void)
 {
 	int i, j, result;
 
