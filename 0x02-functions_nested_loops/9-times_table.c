@@ -4,9 +4,9 @@
  * Description: a function that prints the 9 times table, starting with 0
  * @i: Integer
  * @j: Interger
- * Return: 0
+ * Return: void
  */
-void times_table(void i, j);
+void times_table(void);
 {
 	int i, j, result;
 
