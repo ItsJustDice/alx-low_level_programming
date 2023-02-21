@@ -2,7 +2,6 @@
 /**
  * main - Entry point
  * Description - putchar writes characters c to stdout
- * @c - Character to print
  * Return: 0
  */
 int main(void)
