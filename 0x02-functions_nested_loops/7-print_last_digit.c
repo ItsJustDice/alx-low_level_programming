@@ -1,9 +1,9 @@
 #include "main.h"
 /**
  * print_last_digit - Entry point
- * Description: a function that prints the last digit of a number
- * @n: Integr
- * Return: returns the value of the last digit
+ * Description - Print last digit of a number
+ * @n: Integer
+ * Return: int
  */
 int print_last_digit(int n)
 {
@@ -11,8 +11,8 @@ int print_last_digit(int n)
 
 	if (n < 0)
 	{
-		last = lst * -1;
+		lst = lst * -1;
 	}
-	_putchar(lst + '0')
-		return (lst);
+	_putchar(lst + '0');
+	return (lst);
 }
