@@ -1,10 +1,11 @@
 #include "main.h"
 /**
- * main - Entry point
+ * positive_or_negative - Entry point
  * Description - Tests files
+ * @i: Integer
  * Return: 0
  */
-int main(void)
+int positive_or_negative(int i)
 {
 	int i;
 
