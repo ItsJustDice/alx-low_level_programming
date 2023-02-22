@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * main - Entry point
- * Description - Tests file
+ * Description - Tests file fuctions
  * Return: 0
  */
 int main(void)
