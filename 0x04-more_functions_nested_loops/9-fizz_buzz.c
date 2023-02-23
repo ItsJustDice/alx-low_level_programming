@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description - a program that prints the numbers from 1 to 100
+ * Description: a program that prints the numbers from 1 to 100
  * Return: void
  */
 int main(void)
