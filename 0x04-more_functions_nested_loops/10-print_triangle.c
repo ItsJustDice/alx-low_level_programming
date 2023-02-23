@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_triangle - Entry point
- * Description - a function that prints a triangle
+ * Description: a function that prints a triangle
  * @size: Integer
  * Return: void
  */
@@ -21,7 +21,7 @@ void print_triangle(int size)
 			{
 				_putchar('#');
 			}
-			_putchar(]\n');
+			_putchar('\n');
 		}
 	}
 	else
