@@ -20,7 +20,7 @@ int main(void)
 		}
 		else if (i % 5 == 0)
 		{
-			printf("Buzz");
+			printf("Buzz")
 		}
 		else
 		{
@@ -32,5 +32,6 @@ int main(void)
 		}
 		i++;
 	}
-	printf("\n");
+	putchar('\n');
+	return (0);
 }
