@@ -1,10 +1,11 @@
+#include "main.h"
 #include <stdio.h>
 /**
- * main - Entry point
+ * FizzBuzz - Entry point
  * Description - a program that prints the numbers from 1 to 100
  * Return: 0
  */
-int main(void)
+int FizzBuzz(void)
 {
 	int i;
 
