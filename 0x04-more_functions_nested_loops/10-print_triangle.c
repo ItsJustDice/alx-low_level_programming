@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * print_triangle - Entry point
  * Description - a function that prints a triangle
@@ -7,18 +7,25 @@
  */
 void print_triangle(int size)
 {
-	if (size <= 0)
-	{
-		putchar('\n');
-		return;
-	}
+	int i, j, k;
 
-	for (int i = 1; i <= size; i++)
+	if (size > 0)
 	{
-		for (int j = 1; j <= i; j++)
+		for (i = 1; i <= size; i++)
 		{
-			putchar('#');
+			for (j = 1; j <= size - i; j++)
+			{
+				_putchar(32);
+			}
+			for (k = 1; k <= i; k++)
+			{
+				_putchar('#');
+			}
+			_putchar(]\n');
 		}
-		putchar('\n');
+	}
+	else
+	{
+		_putchar('\n');
 	}
 }
