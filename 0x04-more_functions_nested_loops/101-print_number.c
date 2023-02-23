@@ -5,6 +5,7 @@
  * @n: Integer
  * Return: void
  */
+
 void print_number(int n)
 {
 	unsigned int c;
