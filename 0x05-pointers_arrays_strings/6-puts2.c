@@ -5,6 +5,7 @@
  * @str: Character
  * Return: 0
  */
+
 void puts2(char *str)
 {
 	int j = 0;
