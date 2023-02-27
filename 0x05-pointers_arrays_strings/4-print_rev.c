@@ -1,19 +1,18 @@
 #include "main.h"
 /**
  * print_rev - Entry point
- * Description: prints a string, in reverse, followed by a new line
+ * Description: print in reverse
  * @s: Integer
- * Return: str
+ * Return: char
  */
+
 void print_rev(char *s)
 {
-	int i;
+	int i = 0;
 
-	i = ft_strlen(str);
-	while (i)
-	{
-		write(1, (str + 1), 1);
-		i--;
-	}
-	return (str);
+	while (s[i])
+		i++;
+	while (i--)
+		_putchar(s[i]);
+	_putchar('\n');
 }
