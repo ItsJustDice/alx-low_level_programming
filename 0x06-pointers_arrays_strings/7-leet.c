@@ -10,15 +10,15 @@ char *leet(char *str)
 	char *enc = str;
 	char *letter = "aAeEoOtTlL";
 	char *num = "4433007711";
-	int x, z;
+	int x, j;
 
 	for (x = 0; str[x] != '\0'; x++)
 	{
-		for (x = 0; x < 8; x++)
+		for (j = 0; j < 8; j++)
 		{
-			if (str[x] == letter[z])
+			if (str[x] == letter[j])
 			{
-				enc[x] = num[z];
+				enc[x] = num[j];
 				break;
 			}
 		}
