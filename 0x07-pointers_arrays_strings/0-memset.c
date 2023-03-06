@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * simple_print_buffer - Entery point
+ * *_memset - Entery point
  * Description: fills memory with a constant byte
  * @s: Character
  * @b: Character
@@ -9,11 +9,11 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	char *p = s;
+	unsigned int i;
 
-	while (n-- > 0)
+	for (i = 0; n > 0; i++, n--)
 	{
-		*p++ = b;
+		s[i] = b;
 	}
 	return (s);
 }
