@@ -4,6 +4,7 @@
  * Description: Prints the chessboard
  * @a: Character
  */
+
 void print_chessboard(char (*a)[8])
 {
 	int k, x;
