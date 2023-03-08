@@ -1,31 +1,51 @@
 #include "main.h"
 /**
  * palindrome - Entry point
- * Description: returns 1 if a string is a palindrome and 0 if not
+ * Description: Get the start
+ * @s: Character
+ * Return: 1 if palindrome 0 otherwise
+ */
+int palindrome(char *s)
+{
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	return (1 + palindrome(s + 1));
+}
+/**
+ * _palindrome - Entry point
+ * Description: Checking Palindrome
  * @s: Character
  * @start: Integer
  * @end: Integer
- * Return: 1 if string palindrome, 0 otherwise
+ * Return: 1 if palindrome 0 otherwise
  */
-int palindrome(char *s, int start, int end)
+int _palindrome(char *s, int start, int end)
 {
 	if (start >= end)
 	{
 		return (1);
 	}
-	if (s[start] != s[end])
+	if (*(s + start) == *(s + end))
 	{
-		return (0);
+		return (_palindrome(s, start + 1, end - 1));
 	}
-	return (palindrome(s, start + 1, end - 1));
+	return (0);
 }
 /**
  * is_palindrome - Entry point
- * Description: returns 1 if a string is a palindrome and 0 if not
+ * Description: String palindrome
  * @s: Character
- * Return: 1 if string palindrome, 0 otherwise
+ * Return: 1 if palindrome 0 otherwise
  */
 int is_palindrome(char *s)
 {
-	return (0);
+	int len = palindrome(s);
+
+	if (len == 0 || len == 1)
+	{
+		return (1);
+	}
+	return (_palindrome(s, 0, len - 1));
 }
