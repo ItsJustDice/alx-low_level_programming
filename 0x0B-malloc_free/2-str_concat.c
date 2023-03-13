@@ -9,21 +9,34 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int str, str2;
+	int str1, str2;
 	char *result;
 	int j;
 
-	if (s1 == NULL) s1 = "";
-	if (s2 == NULL) s2 = "";
-
-	while (s1[str1] != '\0') str1++;
-	while (s2[str2] != '\0') str2++;
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+	while (s1[str1] != '\0')
+	{
+		str1++;
+	}
+	while (s2[str2] != '\0')
+	{
+		str2++;
+	}
 
 	result = malloc((str1 + str2 + 1) * sizeof(char));
 
-	if (result == NULL) return (NULL);
-
-	for (j= 0; j < str1; j++)
+	if (result == NULL)
+	{
+		return (NULL);
+	}
+	for (j = 0; j < str1; j++)
 	{
 		*(result + j) = *(s1 + j);
 	}
