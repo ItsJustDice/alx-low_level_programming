@@ -9,8 +9,8 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, r, l = 0, j = 0;
-	char *result;
+	int i, j, len = 0, index = 0;
+	char *str;
 
 	if (ac == 0 || av == NULL)
 	{
@@ -18,24 +18,25 @@ char *argstostr(int ac, char **av)
 	}
 	for (i = 0; i < ac; i++)
 	{
-		for (r = 0; av[i][r]; r++)
-			j++;
+		for (j = 0; av[i][j]; j++)
+			len++;
+		len++;/* add space for newline */
 	}
-	j += ac;
-	result = malloc(sizeof(char) * j + 1);
+	len++; /* add space for null terminator */
 
-	if (result == NULL)
+	str  = malloc(len * sizeof(char));
+
+	if (str == NULL)
 	{
 		return (NULL);
 	}
-	for (r = 0; av[i][r]; r++)
+	for (i = 0; i < ac; i++)
 	{
-		result[l] = av[i][r];
-		l++;
+		for (j = 0; av[i][j]; j++)
+		str[index++] = av[i][j];
+		str[index++] = '\n';
 	}
-	if (result[l] == '\0')
-	{
-		result[l++] = '\n';
-	}
-	return (result);
+	str[index++] = '\0';
+
+	return (str);
 }
