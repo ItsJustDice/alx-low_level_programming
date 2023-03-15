@@ -91,7 +91,7 @@ char **strtow(char *str)
 			return (NULL);
 		}
 		for (j = 0; j < letters; j++)
-			index[i][j] = str[index++];
+			matrix[i][j] = str[index++];
 
 		matrix[i][j] = '\0';
 	}
