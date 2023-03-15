@@ -12,13 +12,13 @@ char **strtow(char *str);
  */
 int word_len(char *str)
 {
-	int flag = 0, len = 0;
+	int index = 0, len = 0;
 
-	while (*(str + flag) && *(str + flag) != ' ')
+	while (*(str + index) && *(str + index) != ' ')
 	{
 		/* iterate until end of string or a space is found */
 		len++;
-		flag++;
+		index++;
 	}
 	return (len);
 }
@@ -29,17 +29,17 @@ int word_len(char *str)
  */
 int count_words(char *str)
 {
-	int flag = 0, words = 0, len = 0;
+	int index = 0, words = 0, len = 0;
 
-	for (flag = 0; *(str + flag); flag++)
+	for (index = 0; *(str + index); index++)
 		len++;
 
-	for (flag = 0; flag < len; flag++)
+	for (index = 0; index < len; index++)
 	{
-		if (*(str + flag) != ' ')
+		if (*(str + index) != ' ')
 		{
 			words++;
-			flag += word_len(str + flag);
+			index += word_len(str + index);
 		}
 	}
 
@@ -55,7 +55,7 @@ char **strtow(char *str)
 {
 	char **matrix;
 
-	int flag = 0, words, i, letters, j;
+	int index = 0, words, i, letters, j;
 
 	if (str == NULL || str[0] == '\0')
 	{
@@ -75,10 +75,10 @@ char **strtow(char *str)
 
 	for (i = 0; i < words; i++)
 	{
-		while (str[flag] == ' ')
-			flag++;
+		while (str[index] == ' ')
+			index++;
 
-		letters = word_len(str + flag);
+		letters = word_len(str + index);
 
 		matrix[i] = malloc(sizeof(char) * (letters + 1));
 
@@ -91,7 +91,7 @@ char **strtow(char *str)
 			return (NULL);
 		}
 		for (j = 0; j < letters; j++)
-			flag[i][j] = str[flag++];
+			index[i][j] = str[index++];
 
 		matrix[i][j] = '\0';
 	}
