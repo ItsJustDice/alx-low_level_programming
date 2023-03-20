@@ -29,6 +29,7 @@ char *_strcopy(char *dest, char *src)
 	dest[matrix] = '\0';
 	return (dest);
 }
+
 /**
  * new_dog - Creates new dog
  * @name: name
