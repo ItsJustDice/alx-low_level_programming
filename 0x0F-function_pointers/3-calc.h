@@ -2,8 +2,6 @@
 #define CALC_H
 
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 /**
  * truct op - A struct op
  * @op: The operator
