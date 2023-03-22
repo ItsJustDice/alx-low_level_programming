@@ -3,7 +3,8 @@
 
 #include <stdlib.h>
 /**
- * struct op - A struct op
+ * struct op - Entry point
+ * Description: Struct op
  * @op: The operator
  * @f: The associated function
  */
