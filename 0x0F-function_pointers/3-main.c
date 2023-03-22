@@ -3,7 +3,7 @@
 /**
  * main - performs simple operations
  * @argc: number of arguements
- * @srgv: array of arguements
+ * @argv: array of arguements
  * Return: Always 0
  */
 int main(int argc, char *argv[])
