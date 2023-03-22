@@ -9,8 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
-	char s;
-	int (*func)(int, int);
+	char (*op_func);
 
 	if (argc != 4)
 	{
@@ -21,39 +20,20 @@ int main(int argc, char *argv[])
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 
-	func = get_op_func(argv[2]);
+	op_func = argv[2];
 
-	if (!func)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-	if (argc !=4)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
-
-	func = get_op_func(argv[2]);
-
-	if (!func)
+	if (get_op_func(op_func) == NULL || op_func[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-
-	s = *argv[2];
-
-	if ((s == '/' || s == '%') && num2 == 0)
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && num2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	result = func(num1, num2);
+	result = get_op_func(op_func)(num1, num2);
 
 	printf("%d\n", result);
 
