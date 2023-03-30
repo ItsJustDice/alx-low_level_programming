@@ -31,8 +31,8 @@ list_t *add_node_end(list_t **head, const char *str)
 	temp = *head;
 
 	/*if temp is NULL place our new_node at the beginning of the list*/
-	/*else if its not null we place our new_node to temp->next hence*/
-	/*adding our new_node at the end of the list*/
+	/*else if its not null we place our _node to temp->next hence*/
+	/*adding our _node at the end of the list*/
 	if (temp == NULL)
 		*head = _node;
 	else
