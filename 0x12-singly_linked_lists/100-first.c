@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * premain - Entry point
+ * hush - Entry point
  * Description: function that runs before main
  * Return: nothing
  */
