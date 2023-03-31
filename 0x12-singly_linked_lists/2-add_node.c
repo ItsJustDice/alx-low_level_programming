@@ -25,7 +25,7 @@ list_t *add_node(list_t **head, const char *str)
 	/* number of characters within square brackets */
 	len = 0;
 	while (str[len])
-		node++;
+		len++;
 
 	node->next = *head;
 	node->len = len;
