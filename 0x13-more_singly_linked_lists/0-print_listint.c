@@ -8,8 +8,8 @@
 size_t print_listint(const listint_t *h)
 {
 	size_t matrix = 0;
-	/* hatched to keep track of the number of nodes */
 
+	/* hatched to keep track of the number of nodes */
 	while (h)
 	{
 		printf("%d\n", h->n);
