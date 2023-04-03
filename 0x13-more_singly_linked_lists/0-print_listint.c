@@ -13,8 +13,8 @@ size_t print_listint(const listint_t *h)
 	while (h)
 	{
 		printf("%d\n", h->n);
-		matrix++;
 		h = h->next;
+		matrix++;
 	}
 	/*"h" is next node, "next" is member of current node and moves loop forward*/
 	return (matrix);
