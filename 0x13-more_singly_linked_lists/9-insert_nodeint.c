@@ -12,12 +12,14 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	unsigned int j;
 	listint_t *node;
 	listint_t *matrix = *head;
-
+	/* allocates memory for node */
 	node = malloc(sizeof(listint_t));
+	/* check if allocation is successful */
 	if (!node)
 	{
 		return (NULL);
 	}
+	/* assign n value to node */
 	node->n = n;
 
 	if (idx == 0)
