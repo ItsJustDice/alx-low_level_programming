@@ -9,7 +9,7 @@ size_t print_listint_safe(const listint_t *head)
 {
 	size_t hop = 0;
 	/* sets count variable to 0 */
-	const listint_t *temp;
+	const listint_t *temp, *matrix;
 
 	if (!head || !head->next)
 	{
@@ -25,9 +25,14 @@ size_t print_listint_safe(const listint_t *head)
 		/* prints node's adress and value */
 		hop++;
 		/* accrual count for each node */
-		if (temp <= temp->next)
+		if (temp > temp->next)
 		{
-			printf("-> [%p] %d\n", (void *)temp->next, temp->next->n);
+			temp = temp->next;
+		}
+		else
+		{
+			matrix = temp->next;
+			printf("-> [%p] %d\n", (void *)matrix, matrix->n);
 			exit(98);
 			/* exit with 98 if there's a cycle */
 		}
