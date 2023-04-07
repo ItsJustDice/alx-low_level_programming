@@ -3,21 +3,28 @@
  * print_binary - Entry point
  * Description: prints the binary representation of a number
  * @n: Integer
- * Return: void
  */
 void print_binary(unsigned long int n)
 {
-	int j;
-	/* go through each bit in the integer in iteration */
-	unsigned long int dip;
-	/* extract number's i-th bit, use bitwise AND, 1UL to create bit mask */
-	for (j = 63; j >= 0; j--)
+	int j = 0;
+
+	/* determine where in the binary string the leftmost 1 is located */
+	while ((n >> j) > 1)
 	{
-		dip = 1UL << j;
-		/* Depending on wheter the bit is set or not, print "1" or "0" */
-		if ((n & dip) != 0)
+		j++;
+	}
+	/* displays the number's binary form in text */
+	while (j >= 0)
+	{
+		if ((n >> j) & 1)
+		{
 			_putchar ('1');
+		}
 		else
+		{
 			_putchar ('0');
+		}
+		/* ends the while loop and advances to the rightmost bit position */
+		j--;
 	}
 }
