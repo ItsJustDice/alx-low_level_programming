@@ -17,7 +17,7 @@ int create_file(const char *filename, char *text_content)
 	}
 	/* open specified file, write & truncate if exists, if not then create */
 	/* put 0600 as file permission (rw- --- ---) */
-	fd = open(filename, O_CREAT, O_RDWR, O_TRUNC, 0600);
+	fd = open(filename, O_CREAT, O_WRONLY, O_TRUNC, 0600);
 	if (fd == -1)
 	{
 		/* opening file failed,if fd was set-to -1 */
@@ -25,21 +25,22 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 	/* determine length if text_content isn't empty */
-	if (text_content != NULL)
+	if (text_content)
 	{
 		/* for string's lenght, make a loop through it */
-		/* the loop keeps going until it reached a NULL  character('0')
-		 * which denoytes the strings conclusion */
+		/* the loop keeps going until it reached a NULL  character('0') */
+		/* which denoytes the strings conclusion */
 		while (text_content[matrix])
 			matrix++;
-	}
-	wri = write(fd, text_content, matrix);
-	if (wri == -1)
-	{
-		/* close the file descriptor and return to -1
-		 * if write() fails, indicating that function failed */
-		close(fd);
-		return (-1);
+		/* creates file with text_content */
+		wri = write(fd, text_content, matrix);
+		if (wri == -1)
+		{
+			/* close the file descriptor and return to -1 */
+			/* if write() fails, indicating that function failed */
+			close(fd);
+			return (-1);
+		}
 	}
 	/* close document and hit return 1 to confirm success */
 	close(fd);
