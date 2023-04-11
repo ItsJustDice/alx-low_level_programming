@@ -19,11 +19,8 @@ int create_file(const char *filename, char *text_content)
 	 */
 	fd = open(filename, O_CREAT, O_WRONLY, O_TRUNC, 0600);
 	if (fd == -1)
-		/*
-		 * opening file failed,if fd was set-to -1
-		 * return -1 in the case to show that function failed
-		 * determine length if text_content isn't empty
-		 */
+		return (-1);
+	/* write to file if text_content isn't empty */
 	if (text_content)
 	{
 		/* tallies numbers of charcters in text_context */
