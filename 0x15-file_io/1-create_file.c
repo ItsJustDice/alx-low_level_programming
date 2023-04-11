@@ -17,7 +17,7 @@ int create_file(const char *filename, char *text_content)
 	 * open specified file, write & truncate if exists, if not then create
 	 * put 0600 as file permission (rw- --- ---)
 	 */
-	fd = open(filename, O_CREAT, O_WRONLY, O_TRUNC, 0600);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fd == -1)
 		return (-1);
 	/* write to file if text_content isn't empty */

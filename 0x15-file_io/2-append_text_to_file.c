@@ -17,13 +17,13 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 
 	/* determine how many characters are in the text if NULL isn't present */
-	if (text_content != NULL)
+	while (text_content != NULL)
 	{
 		for (matrix = 0; text_content[matrix];)
 			matrix++;
 	}
 	/* get the file descriptor by opening the file in append mode */
-	i = open(filename, O_WRONLY, O_APPEND);
+	i = open(filename, O_WRONLY | O_APPEND);
 	/* use the file descriptor you just recieved to write the content of */
 	/* text_content into the file */
 	j = write(i, text_content, matrix);
