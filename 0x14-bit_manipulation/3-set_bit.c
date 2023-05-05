@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * set_but - Entry point
+ * set_bit - Entry point
  * Description: sets the value of a bit to 1 at a given index
  * @n: Integer
  * @index: index of the bit to set

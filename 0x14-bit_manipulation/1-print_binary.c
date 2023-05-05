@@ -18,7 +18,7 @@ void print_binary(unsigned long int n)
 	/* displays the number's binary form in text */
 	while (j >= 0)
 	{
-		if((n >> j) & 1)
+		if ((n >> j) & 1)
 		{
 			_putchar ('1');
 		}
