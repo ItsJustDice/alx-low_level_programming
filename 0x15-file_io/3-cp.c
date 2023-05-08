@@ -8,7 +8,7 @@ void disclosure(int i);
 /**
  * matrix_b - allocates 1024 for a buffer
  * Description: allocation of bytes
- * @filename: storing chars and name of the files
+ * @pop: storing chars and name of the files
  * Return: pointer to a new buffer
  */
 char *matrix_b(char *pop)
