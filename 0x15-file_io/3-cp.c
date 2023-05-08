@@ -89,8 +89,8 @@ int main(int argc, char *argv[])
 	} while (k > 0);
 
 	free(len);
-	close_file(i);
-	close_file(j);
+	disclosure(i);
+	disclosure(j);
 
 	return (0);
 }
