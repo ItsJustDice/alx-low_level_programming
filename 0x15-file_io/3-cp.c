@@ -5,7 +5,7 @@
 char *matrix_b(char *pop);
 void disclosure(int i);
 
-/*
+/**
  * matrix_b - allocates 1024 for a buffer
  * Description: allocation of bytes
  * @filename: storing chars and name of the files
