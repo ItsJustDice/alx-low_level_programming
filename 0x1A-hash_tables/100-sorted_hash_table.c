@@ -171,20 +171,20 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
  */
 void shash_table_print(const shash_table_t *ht)
 {
-	shash_node_t *tmp;
-	char flag = 0; /* 0 before printing any data, 1 after*/
+	shash_node_t *ght;
+	char slip = 0; /* 0 before printing any data, 1 after*/
 
 	if (ht == NULL || ht->array == NULL)
 		return;
 	printf("{");
-	tmp = ht->shead;
-	while (tmp != NULL)
+	ght = ht->shead;
+	while (ght != NULL)
 	{
-		if (flag == 1)
+		if (slip == 1)
 			printf(", ");
-		printf("'%s': '%s'", tmp->key, tmp->value);
-		flag = 1;
-		tmp = tmp->snext;
+		printf("'%s': '%s'", ght->key, ght->value);
+		slip = 1;
+		ght = ght->snext;
 	}
 	printf("}\n");
 }
@@ -196,20 +196,20 @@ void shash_table_print(const shash_table_t *ht)
  */
 void shash_table_print_rev(const shash_table_t *ht)
 {
-	shash_node_t *tmp;
-	char flag = 0; /* 0 before printing any data, 1 after*/
+	shash_node_t *ght;
+	char slip = 0; /* 0 before printing any data, 1 after*/
 
 	if (ht == NULL || ht->array == NULL)
 		return;
 	printf("{");
-	tmp = ht->stail;
-	while (tmp != NULL)
+	ght = ht->stail;
+	while (ght != NULL)
 	{
-		if (flag == 1)
+		if (slip == 1)
 			printf(", ");
-		printf("'%s': '%s'", tmp->key, tmp->value);
-		flag = 1;
-		tmp = tmp->sprev;
+		printf("'%s': '%s'", ght->key, ght->value);
+		slip = 1;
+		ght = ght->sprev;
 	}
 	printf("}\n");
 }
@@ -221,20 +221,20 @@ void shash_table_print_rev(const shash_table_t *ht)
  */
 void shash_table_delete(shash_table_t *ht)
 {
-	unsigned long int i;
+	unsigned long int j;
 	shash_node_t *next;
 
 	if (ht == NULL || ht->array == NULL || ht->size == 0)
 		return;
-	for (i = 0; i < ht->size; i++)
+	for (j = 0; j < ht->size; j++)
 	{
-		while (ht->array[i] != NULL)
+		while (ht->array[j] != NULL)
 		{
-			next = ht->array[i]->next;
-			free(ht->array[i]->key);
-			free(ht->array[i]->value);
-			free(ht->array[i]);
-			ht->array[i] = next;
+			next = ht->array[j]->next;
+			free(ht->array[j]->key);
+			free(ht->array[j]->value);
+			free(ht->array[j]);
+			ht->array[j] = next;
 		}
 	}
 	free(ht->array);
