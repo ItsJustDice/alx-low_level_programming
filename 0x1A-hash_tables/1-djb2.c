@@ -13,7 +13,7 @@ unsigned long int hash_djb2(const unsigned char *str)
 	while ((i = *str++))
 	{
 		/* Utilizing djb2 algorithm, determine hash value: had * 33 + c */
-		had = ((had << 5) + had) + c; /* had * 33 + c */
+		had = ((had << 5) + had) + i; /* had * 33 + i */
 	}
 	return (had); /* Return the final hash value */
 }
