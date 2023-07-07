@@ -18,8 +18,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (tbl->array == NULL) /* Check if memory allocation was successful */
 		return (NULL);
 	for (j = 0; j < size; j++)
-		tbl->array[j] = NULL; /* Set the hash node array's elements */
-	/* all to NULL at the beginning */
+		tbl->array[j] = NULL;
 
 	return (tbl); /* Return the created hash table structure */
 }
